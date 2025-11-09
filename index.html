@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Kegiatanku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Daftar Kegiatanku</h1>
+
+        <section class="input-section">
+            <h2>Tambah Kegiatan Baru</h2>
+            <form id="add-task-form">
+                <div class="form-group">
+                    <label for="task-title">Judul Kegiatan</label>
+                    <input type="text" id="task-title" placeholder="Contoh: Meeting Proyek" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-desc">Deskripsi</label>
+                    <input type="text" id="task-desc" placeholder="Contoh: Membahas timeline">
+                </div>
+                <div class="form-group">
+                    <label for="task-category">Kategori</label>
+                    <select id="task-category" required>
+                        <option value="" disabled selected>Pilih Kategori</option>
+                        <option value="work">Pekerjaan</option>
+                        <option value="personal">Pribadi</option>
+                        <option value="sport">Olahraga</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-add">Tambah</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <nav class="filter-nav">
+            <input type="radio" id="filter-all" name="filter" value="all" checked>
+            <label for="filter-all">Semua</label>
+            <input type="radio" id="filter-work" name="filter" value="work">
+            <label for="filter-work">Pekerjaan</label>
+            <input type="radio" id="filter-personal" name="filter" value="personal">
+            <label for="filter-personal">Pribadi</label>
+            <input type="radio" id="filter-sport" name="filter" value="sport">
+            <label for="filter-sport">Olahraga</label>
+        </nav>
+
+        <main class="task-list" id="task-list-container">
+            
+            <div class="task-item" data-category="work">
+                <h3>Meeting Proyek Phoenix</h3>
+                <p>Membahas timeline dan deliverable.</p>
+                <span class="tag">Pekerjaan</span>
+            </div>
+
+            <div class="task-item" data-category="personal">
+                <h3>Bayar Tagihan</h3>
+                <p>Listrik, air, dan internet.</p>
+                <span class="tag">Pribadi</span>
+            </div>
+            
+        </main>
+
+    </div> <script src="script.js" defer></script>
+</body>
+</html>
